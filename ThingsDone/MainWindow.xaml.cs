@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//TODO List of entries using sqlite database
+// pages: login, callendar, adding new day
+
 namespace ThingsDone
 {
     /// <summary>
@@ -23,6 +26,7 @@ namespace ThingsDone
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }
