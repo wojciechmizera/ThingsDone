@@ -7,29 +7,21 @@
         mc:Ignorable="d"
         Title="Things Done" Height="550" Width="900">
     
-    <Border Background="AntiqueWhite">
+    <Border Background="{StaticResource OuterBrush}"
+                Padding="20"
+            >
         <Border
-            Padding="10"
-            Margin=" 15"
-            Background="AliceBlue" 
-            CornerRadius="5"
-            BorderBrush="YellowGreen"
-            BorderThickness="2">
-            
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Viewbox Grid.Column="0" VerticalAlignment="Top">
-                
-            <Calendar Margin="10"/>
-            </Viewbox>    
+            Width="{Binding ElementName=mainFrame, Path=Content.Width}"
+            Height="{Binding ElementName=mainFrame, Path=Content.Height}"
 
-            <TextBox 
-                Padding="10"
-                Grid.Column="1"/>
-        </Grid>
+            Background="{StaticResource BackgroundBrush}" 
+            CornerRadius="5"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="2">
+
+            <Frame 
+                x:Name="mainFrame"
+                Content="{Binding MainPage}"/>
         </Border>
     </Border>
 </Window>
