@@ -9,6 +9,17 @@
       Title="MainPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0" VerticalAlignment="Top">
+
+            <Calendar Margin="10"/>
+        </Viewbox>
+
+        <TextBox 
+                Padding="10"
+                Grid.Column="1"/>
     </Grid>
 </Page>
