@@ -23,6 +23,7 @@ namespace ThingsDone
         public MainPage()
         {
             InitializeComponent();
+            DataContext = new MainPageViewModel();
         }
     }
 }

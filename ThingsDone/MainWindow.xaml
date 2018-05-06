@@ -18,7 +18,7 @@
 
             <Frame 
                 x:Name="mainFrame"
-                Content="{Binding loginPage}"/>
+                Content="{Binding LoginPage}"/>
         </Border>
     </Border>
 </Window>

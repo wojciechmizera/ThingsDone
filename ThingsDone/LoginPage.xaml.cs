@@ -23,6 +23,7 @@ namespace ThingsDone
         public LoginPage()
         {
             InitializeComponent();
+            DataContext = new LoginPageViewModel();
         }
     }
 }
