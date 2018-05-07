@@ -16,12 +16,13 @@
 
             Background="{StaticResource BackgroundBrush}" 
             CornerRadius="5"
-            BorderBrush="{StaticResource BorderBrush}"
+            BorderBrush="{StaticResource LightGreenBrush}"
             BorderThickness="2">
 
             <Frame 
+                Focusable="False"
                 x:Name="mainFrame"
-                Content="{Binding MainPage}"/>
+                Content="{Binding LoginPage}"/>
         </Border>
     </Border>
 </Window>
