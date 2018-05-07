@@ -1,6 +1,6 @@
 ﻿namespace ThingsDone
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : BaseViewModel
     {
         public MainPageViewModel()
         {

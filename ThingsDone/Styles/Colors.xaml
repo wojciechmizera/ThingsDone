@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ThingsDone">
+
+
+    
+    
+    
+    <Color x:Key="OuterColor">#FFFAEBD7</Color>
+    <SolidColorBrush x:Key="OuterBrush" Color="{StaticResource OuterColor}"/>
+
+    <Color x:Key="BackgroundColor">#FFF0F8FF</Color>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
+
+    <Color x:Key="BorderColor">#FF9ACD32</Color>
+    <SolidColorBrush x:Key="LightGreenBrush" Color="{StaticResource BorderColor}"/>
+
+    <Color x:Key="DarkGreenColor">#FF56B308</Color>
+    <SolidColorBrush x:Key="DarkGreenBrush" Color="{StaticResource DarkGreenColor}"/>
+
+    <Color x:Key="LightGrayColor">#FFB4B4B4</Color>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGrayColor}"/>
+
+    <Color x:Key="LightBrownColor">#FFC78712</Color>
+    <SolidColorBrush x:Key="LightBrownBrush" Color="{StaticResource LightBrownColor}"/>
+</ResourceDictionary>

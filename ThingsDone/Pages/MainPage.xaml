@@ -18,7 +18,7 @@
             <Calendar Margin="10"/>
         </Viewbox>
 
-        <TextBox 
+        <RichTextBox 
                 Padding="10"
                 Grid.Column="1"/>
     </Grid>

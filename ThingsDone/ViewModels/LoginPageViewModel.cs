@@ -1,6 +1,6 @@
 ﻿namespace ThingsDone
 {
-    public class LoginPageViewModel
+    public class LoginPageViewModel : BaseViewModel
     {
         public LoginPageViewModel()
         {
