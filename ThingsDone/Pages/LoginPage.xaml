@@ -11,22 +11,21 @@
 
       <!--d:DesignHeight="450" d:DesignWidth="800"-->
 
-    <StackPanel Background="{StaticResource BackgroundBrush}">
+    <StackPanel>
         <Label 
-            Content="Login" 
-            FontSize="58"
+            Content="Things Done" 
+            FontSize="{StaticResource FontSizeLarge}"
             FontWeight="SemiBold"
             HorizontalAlignment="Center"
             Margin="0,20,0,0"
-            Foreground="#FFC78712"
-            FontFamily="Sitka Display"
+            Foreground="{StaticResource LightBrownBrush}"
          />
 
         <TextBox
             Tag="Login"
             Margin="0,40,0,0"
             Width="200"
-            FontSize="24"
+            FontSize="{StaticResource FontSizeMedium}"
             HorizontalContentAlignment="Center"
             />
         
@@ -35,9 +34,19 @@
             Tag="Password"
             Margin="0,40,0,0"
             Width="200"
-            FontSize="24"
+            FontSize="{StaticResource FontSizeMedium}"
             HorizontalContentAlignment="Center"
             />
+
+        <Button
+            Width="200"
+            Margin="0,40,0,0"
+            FontSize="{StaticResource FontSizeBig}"
+            Foreground="{StaticResource LightBrownBrush}"
+            Content="Log in"
+>
+            
+        </Button>
     </StackPanel>
     
 </Page>

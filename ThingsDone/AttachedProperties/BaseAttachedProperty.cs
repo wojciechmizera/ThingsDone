@@ -14,9 +14,8 @@ namespace ThingsDone
 
         public static Parent Instance { get; private set; } = new Parent();
 
-        public static readonly DependencyProperty ValueProperty = 
-            DependencyProperty.Register("Value", typeof(Property), typeof(BaseAttachedProperty<Parent, Property>), 
-                new PropertyMetadata( new PropertyChangedCallback(OnValuePropertyChanged)));
+        public static readonly DependencyProperty ValueProperty = DependencyProperty.RegisterAttached("Value", typeof(Property), typeof(BaseAttachedProperty<Parent, Property>), new PropertyMetadata(new PropertyChangedCallback(OnValuePropertyChanged)));
+
 
         private static void OnValuePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -25,13 +24,11 @@ namespace ThingsDone
             Instance.ValueChanged(d, e);
         }
 
-        public virtual void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) { }
 
-
-
-        
         public static Property GetValue(DependencyObject d) => (Property)d.GetValue(ValueProperty);
 
-        public static void SetValue(DependencyObject d, Property value) => d.SetValue(ValueProperty, value); 
+        public static void SetValue(DependencyObject d, Property value) => d.SetValue(ValueProperty, value);
+
+        public virtual void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e) { }
     }
 }

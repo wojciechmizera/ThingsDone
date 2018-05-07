@@ -8,25 +8,16 @@ using System.Windows.Controls;
 
 namespace ThingsDone
 {
-    public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>
-    {
-        public static void SetValue(DependencyObject sender)
-        {
-            SetValue(sender, ((PasswordBox)sender).SecurePassword.Length > 0);
-        }
-    }
-
-
     public class MonitorPasswordProperty : BaseAttachedProperty<MonitorPasswordProperty, bool>
     {
-        public override void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        public override void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            var passwordBox = d as PasswordBox;
+            var passwordBox = sender as PasswordBox;
 
-            if (passwordBox == null) return;
+            if (passwordBox == null)
+                return;
 
             passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
-
 
             if ((bool)e.NewValue)
             {
@@ -42,5 +33,11 @@ namespace ThingsDone
         }
     }
 
-
+    public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>
+    {
+        public static void SetValue(DependencyObject sender)
+        {
+            SetValue(sender, ((PasswordBox)sender).SecurePassword.Length > 0);
+        }
+    }
 }

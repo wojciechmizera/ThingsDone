@@ -3,6 +3,9 @@
                     xmlns:local="clr-namespace:ThingsDone">
 
 
+    
+    
+    
     <Color x:Key="OuterColor">#FFFAEBD7</Color>
     <SolidColorBrush x:Key="OuterBrush" Color="{StaticResource OuterColor}"/>
 
@@ -10,8 +13,14 @@
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
 
     <Color x:Key="BorderColor">#FF9ACD32</Color>
-    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
+    <SolidColorBrush x:Key="LightGreenBrush" Color="{StaticResource BorderColor}"/>
+
+    <Color x:Key="DarkGreenColor">#FF56B308</Color>
+    <SolidColorBrush x:Key="DarkGreenBrush" Color="{StaticResource DarkGreenColor}"/>
 
     <Color x:Key="LightGrayColor">#FFB4B4B4</Color>
     <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGrayColor}"/>
+
+    <Color x:Key="LightBrownColor">#FFC78712</Color>
+    <SolidColorBrush x:Key="LightBrownBrush" Color="{StaticResource LightBrownColor}"/>
 </ResourceDictionary>
