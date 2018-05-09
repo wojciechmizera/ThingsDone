@@ -14,16 +14,12 @@ namespace ThingsDone
         {
             if (secureString == null) return string.Empty;
 
-            //return new System.Net.NetworkCredential()
-
-
             IntPtr unmanaged = IntPtr.Zero;
 
             try
             {
                 unmanaged = Marshal.SecureStringToGlobalAllocUnicode(secureString);
-
-                // TODO fix
+                
                 return Marshal.PtrToStringUni(unmanaged);
             }
             finally

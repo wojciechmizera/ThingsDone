@@ -1,6 +1,10 @@
-﻿using System.Security;
+﻿using System;
+using System.Security;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace ThingsDone
 {
@@ -27,20 +31,30 @@ namespace ThingsDone
 
         public async Task Login(object parameter)
         {
-            // check user and password
-            // animate
+            var passwordContainer = parameter as IHavePassword;
 
-            bool tete = parameter is SecureString;
+            // TODO implement login
+            string login = LoginText;
+            string password = passwordContainer.Password.Unsecure();
 
-            string s = ((SecureString)parameter).ToString();
+            Frame pageFrame = FindParentFrame(parameter);
+            pageFrame.Content = new MainPage();
 
-            var password = (parameter as SecureString).Unsecure();
-
-            //string pass = new System.Net.NetworkCredential(LoginText, parameter as SecureString).Password;
-
-            System.Windows.Forms.MessageBox.Show(LoginText + "\n" + password);
-
+            // animation somehow...
             await Task.Delay(100);
+        }
+
+        private static Frame FindParentFrame(object parameter)
+        {
+            Frame pageFrame = null;
+            DependencyObject currParent = VisualTreeHelper.GetParent(parameter as DependencyObject);
+            while (currParent != null && pageFrame == null)
+            {
+                pageFrame = currParent as Frame;
+                currParent = VisualTreeHelper.GetParent(currParent);
+            }
+
+            return pageFrame;
         }
     }
 }

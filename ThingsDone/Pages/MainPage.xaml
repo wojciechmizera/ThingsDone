@@ -20,6 +20,7 @@
 
         <RichTextBox 
                 Padding="10"
+            Margin="5"
                 Grid.Column="1"/>
     </Grid>
 </Page>

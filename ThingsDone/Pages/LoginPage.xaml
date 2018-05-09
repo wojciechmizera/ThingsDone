@@ -7,7 +7,15 @@
       mc:Ignorable="d" 
       Width="350"
       Height="450"
-      Title="LoginPage">
+      x:Name="This"
+      FocusManager.FocusedElement="{Binding ElementName=loginText}"
+      >
+
+    <Page.InputBindings>
+        <KeyBinding Key="Return" 
+                    Command="{Binding LoginCommand}" 
+                    CommandParameter="{Binding ElementName=This}"/>
+    </Page.InputBindings>
 
 
     
@@ -22,6 +30,7 @@
          />
 
         <TextBox
+            
             x:Name="loginText"
             Text="{Binding LoginText}"
             Tag="Login"
@@ -39,20 +48,20 @@
             Width="200"
             FontSize="{StaticResource FontSizeMedium}"
             HorizontalContentAlignment="Center"
-            
             />
 
         <Button
+            x:Name="LoginButton"
             Width="200"
             Margin="0,40,0,0"
             FontSize="{StaticResource FontSizeBig}"
             Foreground="{StaticResource LightBrownBrush}"
             Content="Log in"
             Command="{Binding LoginCommand}"
-            CommandParameter="{Binding SecurePassword, ElementName=passwordText}"
->
-            
-        </Button>
+            CommandParameter="{Binding ElementName=This}"
+            />
+
+        <!--button create account-->
     </StackPanel>
     
 </Page>

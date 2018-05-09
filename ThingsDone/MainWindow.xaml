@@ -22,7 +22,7 @@
             <Frame 
                 Focusable="False"
                 x:Name="mainFrame"
-                Content="{Binding LoginPage}"/>
+                Content="{Binding LoginPage}" NavigationUIVisibility="Hidden"/>
         </Border>
     </Border>
 </Window>
