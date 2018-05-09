@@ -9,8 +9,8 @@
       Height="450"
       Title="LoginPage">
 
-      <!--d:DesignHeight="450" d:DesignWidth="800"-->
 
+    
     <StackPanel>
         <Label 
             Content="Things Done" 
@@ -22,6 +22,8 @@
          />
 
         <TextBox
+            x:Name="loginText"
+            Text="{Binding LoginText}"
             Tag="Login"
             Margin="0,40,0,0"
             Width="200"
@@ -31,11 +33,13 @@
         
         <PasswordBox
             
+            x:Name="passwordText"
             Tag="Password"
             Margin="0,40,0,0"
             Width="200"
             FontSize="{StaticResource FontSizeMedium}"
             HorizontalContentAlignment="Center"
+            
             />
 
         <Button
@@ -44,6 +48,8 @@
             FontSize="{StaticResource FontSizeBig}"
             Foreground="{StaticResource LightBrownBrush}"
             Content="Log in"
+            Command="{Binding LoginCommand}"
+            CommandParameter="{Binding SecurePassword, ElementName=passwordText}"
 >
             
         </Button>
